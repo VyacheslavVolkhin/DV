@@ -2656,6 +2656,9 @@ html.with-fancybox body.hide-scrollbar {
   gap: 15px;
   position: relative;
 }
+.info-project-box:has(.photo-large) .bg-photo-wrap {
+  display: none;
+}
 .info-project-box .bg-photo-wrap {
   position: absolute;
   top: 0;
@@ -2670,6 +2673,20 @@ html.with-fancybox body.hide-scrollbar {
 }
 .info-project-box .photo-inner-wrap {
   position: static;
+}
+.info-project-box .photo-inner-wrap.photo-large {
+  aspect-ratio: 1488/960;
+  position: relative;
+}
+.info-project-box .photo-inner-wrap.photo-large .elm-photo {
+  aspect-ratio: 4000/1880;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 215%;
+  max-width: inherit;
+  -webkit-transform: translate(-66%, -50%);
+  transform: translate(-66%, -50%);
 }
 .info-project-box .info-inner-wrap {
   background: rgba(0, 0, 0, 0.65);
@@ -3389,6 +3406,12 @@ html.with-fancybox body.hide-scrollbar {
     -webkit-transform: translate(-35%, -42%);
     transform: translate(-35%, -42%);
   }
+  .info-project-box .photo-inner-wrap.photo-large .elm-photo {
+    width: 315%;
+    min-width: 1200px;
+    -webkit-transform: translate(-62%, -50%);
+    transform: translate(-62%, -50%);
+  }
   .info-project-box .info-inner-wrap {
     width: 40rem;
     -ms-flex-negative: 0;
@@ -3620,6 +3643,10 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
+  .info-project-box .photo-inner-wrap.photo-large .elm-photo {
+    -webkit-transform: translate(-55%, -50%);
+    transform: translate(-55%, -50%);
+  }
   .info-project-box .photo-inner-wrap .elm-photo {
     -webkit-transform: translate(-25%, -42%);
     transform: translate(-25%, -42%);
